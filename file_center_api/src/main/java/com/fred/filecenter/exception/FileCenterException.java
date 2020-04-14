@@ -1,9 +1,10 @@
 package com.fred.filecenter.exception;
 
+import cn.hutool.core.util.StrUtil;
 import com.fred.filecenter.enums.exceptioncode.AppCode;
 import com.fred.filecenter.enums.exceptioncode.SystemErrorCode;
 import lombok.*;
-import org.springframework.util.StringUtils;
+
 
 /**
  * 〈功能概述〉<br>
@@ -35,7 +36,7 @@ public class FileCenterException extends RuntimeException {
     }
 
     public static FileCenterException create(@lombok.NonNull AppCode appCode, String errorMessage) {
-        if (StringUtils.isEmpty(errorMessage)) {
+        if (StrUtil.isEmpty(errorMessage)) {
             return FileCenterException.of(appCode.getMessage(), appCode);
         }
         return FileCenterException.of(errorMessage, appCode);

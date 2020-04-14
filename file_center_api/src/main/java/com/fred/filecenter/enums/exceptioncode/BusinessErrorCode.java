@@ -10,7 +10,8 @@ package com.fred.filecenter.enums.exceptioncode;
  */
 
 public enum BusinessErrorCode implements AppCode {
-    File_IS_NULL(20001,"文件内容为空") ;
+    File_IS_NULL(20001,"文件内容为空") ,
+    FILE_UPDATE_ERROR(20002,"文件上传失败");
 
     private int code;
     private String message;
