@@ -1,0 +1,13 @@
+server:
+  port: 9019
+spring:
+  application:
+    name: file-center
+  servlet:
+    multipart:
+      location: /Users/fuliping/data/filecenter
+  datasource:
+    username: root
+    password: 123
+    url: jdbc:mysql://192.161.1.1
+    driver-class-name: com.mysql.cj.jdbc.Driver
